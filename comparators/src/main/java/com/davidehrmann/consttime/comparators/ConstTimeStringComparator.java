@@ -2,11 +2,11 @@ package com.davidehrmann.consttime.comparators;
 
 import java.util.Comparator;
 
-public final class ConstantTimeStringComparator implements Comparator<String> {
+public final class ConstTimeStringComparator implements Comparator<String> {
 
-    public static final ConstantTimeStringComparator INSTANCE = new ConstantTimeStringComparator();
+    public static final ConstTimeStringComparator INSTANCE = new ConstTimeStringComparator();
 
-    private ConstantTimeStringComparator() {
+    private ConstTimeStringComparator() {
 
     }
 

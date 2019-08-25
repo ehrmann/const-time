@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import static org.junit.Assert.*;
 
-public class ConstantTimeStringComparatorTest {
+public class ConstTimeStringComparatorTest {
 
     @Test
     public void testRandomStrings() {
@@ -24,7 +24,7 @@ public class ConstantTimeStringComparatorTest {
             String s1 = new String(b1, StandardCharsets.ISO_8859_1);
             String s2 = new String(b2, StandardCharsets.ISO_8859_1);
 
-            int d1 = ConstantTimeStringComparator.INSTANCE.compare(s1, s2);
+            int d1 = ConstTimeStringComparator.INSTANCE.compare(s1, s2);
             int d2 = s1.compareTo(s2);
 
             assertEquals(Math.signum(d2), Math.signum(d1), .001);
