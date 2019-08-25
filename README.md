@@ -1,4 +1,7 @@
 # Constant-time Java Comparators
+[![CircleCI](https://circleci.com/gh/ehrmann/const-time.svg?style=svg)](https://circleci.com/gh/ehrmann/const-time)
+
+
 
 ## Motivation
 
