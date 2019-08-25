@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/build
+
+    docker:
+      - image: circleci/openjdk:8-jdk-browsers
+
+    steps:
+      - checkout
+      - restore_cache:
+          key: const-time-{{ checksum "pom.xml" }}{{ checksum "collections/pom.xml" }}{{ checksum "comparators/pom.xml" }}{{ checksum "examples/pom.xml" }}
+
+      - run: mvn dependency:go-offline
+
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: const-time-{{ checksum "pom.xml" }}{{ checksum "collections/pom.xml" }}{{ checksum "comparators/pom.xml" }}{{ checksum "examples/pom.xml" }}
+
+      - run: mvn package
