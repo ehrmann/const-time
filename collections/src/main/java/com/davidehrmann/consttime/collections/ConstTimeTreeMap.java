@@ -53,7 +53,7 @@ public class ConstTimeTreeMap<K, V> extends AbstractMap<K,V> {
     }
 
     private TreeNode<K, V> getTreeNode(K key) {
-
+        return null;
     }
 
     private void addTreeNode(TreeNode<K, V> node) {
@@ -92,7 +92,7 @@ public class ConstTimeTreeMap<K, V> extends AbstractMap<K,V> {
 
         @Override
         public boolean contains(Object o) {
-
+            return false;
         }
 
         @Override
